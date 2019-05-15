@@ -13,7 +13,7 @@ namespace Serialization.Pages
     public class IndexModel : PageModel
     {
         public DataClassA DataObjA { get; set; }
-        public string DataObjASerilized { get; private set; }
+        public string DataObjASerialized { get; private set; }
 
         public void OnGet()
         {
@@ -25,7 +25,7 @@ namespace Serialization.Pages
                 BooleanField = true
             };
 
-            DataObjASerilized = JsonConvert.SerializeObject(
+            DataObjASerialized = JsonConvert.SerializeObject(
                 DataObjA,
                 new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }
                 );
