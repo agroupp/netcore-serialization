@@ -1,0 +1,11 @@
+﻿@page
+@model Serialization.Pages.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>C# Class Instance Serilization</h1>
+<p>Not serialized to JSON DataObj: @Model.DataObjA.ToString()</p>
+
+<p>Serialized to JSON DataObj: @Model.DataObjASerilized</p>
+
